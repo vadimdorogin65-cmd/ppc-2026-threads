@@ -121,7 +121,7 @@ void DoroginVBinImgConvHullALL::FloodFill(int seed_x, int seed_y, int width, int
     const Point cur = q.front();
     q.pop();
     component.push_back(cur);
-    for (const auto [dx, dy] : kNeighbours) {
+    for (const auto &[dx, dy] : kNeighbours) {
       const int nx = cur.x + dx;
       const int ny = cur.y + dy;
       if (!CellInImage(nx, ny, width, height)) {
